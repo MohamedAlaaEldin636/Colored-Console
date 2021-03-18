@@ -41,7 +41,7 @@ allprojects {
 ``` kotlin
 // ...
 dependencies {
-    implementation("com.github.MohamedAlaaEldin636.Colored-Console:coloredconsole:X.Y.Z")
+    implementation("com.github.MohamedAlaaEldin636:Colored-Console:X.Y.Z")
 }
 ```
 
