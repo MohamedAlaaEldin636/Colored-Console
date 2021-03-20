@@ -4,41 +4,41 @@
 package com.maproductions.mohamedalaa.coloredconsole
 
 @JvmName("print")
-fun consolePrint(msg: Any, markup: String = ConsoleLog.reset) = coloredPrint(markup, msg.toString(), MsgType.CUSTOM, false)
+fun consolePrint(msg: Any?, markup: String = ConsoleLog.reset) = coloredPrint(markup, msg.toString(), MsgType.CUSTOM, false)
 @JvmName("printLn")
-fun consolePrintLn(msg: Any, markup: String = ConsoleLog.reset) = coloredPrint(markup, msg.toString(), MsgType.CUSTOM, true)
+fun consolePrintLn(msg: Any?, markup: String = ConsoleLog.reset) = coloredPrint(markup, msg.toString(), MsgType.CUSTOM, true)
 
 @JvmName("verbose")
-fun consoleVerbose(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.green, msg.toString(), MsgType.VERBOSE, false)
+fun consoleVerbose(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.green, msg.toString(), MsgType.VERBOSE, false)
 @JvmName("verboseLn")
-fun consoleVerboseLn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.green, msg.toString(), MsgType.VERBOSE, true)
+fun consoleVerboseLn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.green, msg.toString(), MsgType.VERBOSE, true)
 
 @JvmName("debug")
-fun consoleDebug(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.magenta, msg.toString(), MsgType.DEBUG, false)
+fun consoleDebug(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.magenta, msg.toString(), MsgType.DEBUG, false)
 @JvmName("debugLn")
-fun consoleDebugLn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.magenta, msg.toString(), MsgType.DEBUG, true)
+fun consoleDebugLn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.magenta, msg.toString(), MsgType.DEBUG, true)
 
 @JvmName("info")
-fun consoleInfo(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.brightYellow, msg.toString(), MsgType.INFO, false)
+fun consoleInfo(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.brightYellow, msg.toString(), MsgType.INFO, false)
 @JvmName("infoLn")
-fun consoleInfoLn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.brightYellow, msg.toString(), MsgType.INFO, true)
+fun consoleInfoLn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.brightYellow, msg.toString(), MsgType.INFO, true)
 
 @JvmName("warn")
-fun consoleWarn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.cyan, msg.toString(), MsgType.WARN, false)
+fun consoleWarn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.cyan, msg.toString(), MsgType.WARN, false)
 @JvmName("warnLn")
-fun consoleWarnLn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.cyan, msg.toString(), MsgType.WARN, true)
+fun consoleWarnLn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.cyan, msg.toString(), MsgType.WARN, true)
 
 @JvmName("error")
-fun consoleError(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.red, msg.toString(), MsgType.ERROR, false)
+fun consoleError(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.red, msg.toString(), MsgType.ERROR, false)
 @JvmName("errorLn")
-fun consoleErrorLn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.red, msg.toString(), MsgType.ERROR, true)
+fun consoleErrorLn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.red, msg.toString(), MsgType.ERROR, true)
 
 @JvmName("wtf")
-fun consoleWTF(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.backgroundRed + ConsoleLog.black, msg.toString(), MsgType.WTF, false)
+fun consoleWTF(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.backgroundRed + ConsoleLog.black, msg.toString(), MsgType.WTF, false)
 @JvmName("wtfLn")
-fun consoleWTFLn(msg: Any) = coloredPrint(ConsoleLog.reset + ConsoleLog.backgroundRed + ConsoleLog.black, msg.toString(), MsgType.WTF, true)
+fun consoleWTFLn(msg: Any?) = coloredPrint(ConsoleLog.reset + ConsoleLog.backgroundRed + ConsoleLog.black, msg.toString(), MsgType.WTF, true)
 
-private fun coloredPrint(consoleStyle: String, msg: String, msgType: MsgType, linePrint : Boolean) {
+private fun coloredPrint(consoleStyle: String, msg: String?, msgType: MsgType, linePrint : Boolean) {
     val stackTraceElement = Thread.currentThread().stackTrace[3]
     
     val start = when (msgType) {

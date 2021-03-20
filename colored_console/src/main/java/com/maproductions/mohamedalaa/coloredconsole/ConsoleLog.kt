@@ -4,6 +4,13 @@ package com.maproductions.mohamedalaa.coloredconsole
 
 object ConsoleLog {
 
+    @JvmStatic
+    fun main(args: Array<String>) {
+        println(null)
+        println(null)
+        println("null")
+    }
+
     const val reset = "\u001b[0m"
 
     //region Foreground Colors
