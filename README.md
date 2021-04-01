@@ -48,6 +48,7 @@ dependencies {
 ## Features [▴](#contents-)
 
 - Colors the output of the console if you want.
+- Displays the stacktrace as if it was Logcat.
 
 ## Usage Examples [▴](#contents-)
 
