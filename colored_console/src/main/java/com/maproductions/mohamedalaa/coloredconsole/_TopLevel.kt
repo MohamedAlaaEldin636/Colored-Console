@@ -3,7 +3,7 @@
 
 package com.maproductions.mohamedalaa.coloredconsole
 
-private const val DEFAULT_STACKTRACE_LIMIT = 10
+private const val DEFAULT_STACKTRACE_LIMIT = Int.MAX_VALUE
 
 private const val FULL_CLASS_NAME = "com.maproductions.mohamedalaa.coloredconsole.Console"
 
